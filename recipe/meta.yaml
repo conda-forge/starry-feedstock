@@ -10,7 +10,7 @@ source:
   sha256: 3865b3f9367beb31da95bf5aaf99ed89dd65b56550310665234a9124a0cf0a96
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
   script:
     - python -m pip install --no-deps --ignore-installed .
@@ -30,7 +30,6 @@ requirements:
     - scipy
     - matplotlib
     - pillow
-    - healpy
 
 test:
   imports:

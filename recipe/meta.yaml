@@ -34,8 +34,6 @@ requirements:
 test:
   imports:
     - starry
-    - starry.grad
-    - starry.multi
     - starry.maps
 
 about:

@@ -10,7 +10,7 @@ source:
   sha256: 955799a486afc8ec7337c272d41bbd5f327f6465abc73c049eb1d6d3f577a509
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
@@ -27,7 +27,7 @@ requirements:
     - python
     - {{ pin_compatible('numpy') }}
     - scipy
-    - matplotlib
+    - matplotlib-base
     - pillow
 
 test:

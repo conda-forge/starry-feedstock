@@ -1,5 +1,5 @@
 {% set name = "starry" %}
-{% set version = "0.3.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 955799a486afc8ec7337c272d41bbd5f327f6465abc73c049eb1d6d3f577a509
+  sha256: bfc4aabc6547bc4230f8a965037e5526c6c509f96499f422f0d9d4754ef6ebcc
 
 build:
-  number: 3
-  skip: True  # [win]
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  number: 0
+  skip: true  # [win]
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   build:
@@ -40,7 +40,7 @@ about:
   license: GPL-3.0
   license_family: GPL
   license_file: LICENSE
-  summary: 'Analytic occultation light curves for astronomy'
+  summary: Analytic occultation light curves for astronomy
   description: |
     The starry code package enables the computation of light curves for various
     applications in astronomy including transits and secondary eclipses of
